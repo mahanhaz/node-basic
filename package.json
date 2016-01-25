@@ -1,0 +1,16 @@
+{
+  "name": "mahan-crawler",
+  "version": "1.0.0",
+  "description": "the crawler for finding the content from stackoverflew",
+  "main": "app.js",
+  "scripts": {
+    "reload": "node deploy",
+    "start": "node deploy && node app",
+    "test": "node deploy --test && node app --test"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jsonfile": "^2.2.3"
+  }
+}
