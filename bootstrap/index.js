@@ -6,14 +6,14 @@ var app = {
 
 function start() {
     this.configPathSet();
-    var app = this;
+    var base = this;
     var fs = require('fs');
 
     fs.readdir(this.app.config.path.vendors + '/', function(err, vendors) {
-        if (vendors) {
+	if (vendors) {
             for (var i in vendors) {
-                var vendor = require(this.app.config.path.vendors + '/' + vendors[i]);
-                vendor.autoload(app);
+                var vendor = require(base.app.config.path.vendors + '/' + vendors[i]);
+                vendor.autoload(base);
             }
         }
     });
